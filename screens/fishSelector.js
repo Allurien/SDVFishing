@@ -1,11 +1,26 @@
 import React from 'react';
-import { ScrollView, Text, View, Button } from 'react-native';
+import { ScrollView, Text, View, Button, TouchableOpacity, Image } from 'react-native';
 import styles from '../assets/styles/mainStyles';
 
+//TODO: Resolve issue with value not setting on first image press.
+
+
 export default class FishSelector extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      fishValue: 0
+    }
+  }
+
   static navigationOptions = {
     header: null,
   };
+
+  setFishValue(){
+    this.setState({fishValue: 30});
+    console.log('fish value', this.state.fishValue);
+  }
 
   render() {
     const { navigate } = this.props.navigation;
@@ -16,9 +31,16 @@ export default class FishSelector extends React.Component {
             <Text>
               Fish Selector
             </Text>
-            <Button onPress={() => navigate('CrabPot')} title='Crab Pot Item' />
-            <Button onPress={() => navigate('XP')} title='Trash' />
-            <Button onPress={() => navigate('Fish')} title='Fish' />
+            <TouchableOpacity onPress={()=>{
+              this.setState({fishValue: 30});
+              console.log('fish value', this.state);
+            }}>
+              <Image
+              style={{width: 48, height: 48}}
+              source={{uri: 'https://s3.us-east-2.amazonaws.com/sdv-fishing/fish/Albacore.png'}}
+              />
+            </TouchableOpacity>
+            <Button onPress={() => {navigate('Modifiers', {value: this.state.fishValue});}} title='Add Modifiers' />
           </View>
         </ScrollView>
       </View>

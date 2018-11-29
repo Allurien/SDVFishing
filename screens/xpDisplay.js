@@ -6,23 +6,23 @@ export default class XPDisplay extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      passthroughValue: 0,
-      modifier: 0
+      itemValue: 0,
+      modifier: 1,
     }
   }
   static navigationOptions = {
     header: null,
   };
   async componentDidMount(){
+    await this.addValues();
+  }
+  addValues(){
     const { navigation } = this.props;
-    const value = navigation.getParam('value', 'no value available');
-    const modifiers = navigation.getParam('modifier', 'no modifier available');
-    await this.setState({passthroughValue: value, modifier: modifiers});
-    console.log('xp value', this.state.passthroughValue);
-    console.log('modifier value', this.state.modifier);
+    const value = navigation.getParam('value', 1);
+    const modifiers = navigation.getParam('modifier', 1);
+    this.setState({itemValue: value, modifier: modifiers});
   }
 
-  
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -30,11 +30,9 @@ export default class XPDisplay extends React.Component {
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.getStartedContainer}>
             <Text>
-              Your XP total is {this.state.passthroughValue}
+              Your XP total is {this.state.itemValue * this.state.modifier}
             </Text>
-            <Button onPress={() => navigate('CrabPot')} title='Crab Pot Item' />
-            <Button onPress={() => navigate('XP')} title='Trash' />
-            <Button onPress={() => navigate('Fish')} title='Fish' />
+            <Button onPress={() => {navigate('Selector');}} title='Add Another Item' />
           </View>
         </ScrollView>
       </View>
