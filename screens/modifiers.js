@@ -6,24 +6,22 @@ export default class Modifiers extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      passthroughValue: 0,
-      radioButton: 'basevalue'
+      itemValue: 0,
+      radioButton: 1
     }
   }
   static navigationOptions = {
     header: null,
   };
-  async componentDidMount(){
-    const referrer = this.props.navigation.getParam('referrer', 'no referrer available');
-    if(referrer === 'Trash'){
-      await this.setState({passthroughValue: 3})
-      console.log('value', this.state.passthroughValue);
-    }
+  componentDidMount(){
+    const { navigation } = this.props;
+    const value = navigation.getParam('value', 1);
+    this.setState({itemValue: value});
+    console.log('passed value', this.state.itemValue);
   }
 
   render() {
     const { navigate } = this.props.navigation;
-    console.log("RADIO STATE: \n", this.state.radioButton);
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -35,20 +33,19 @@ export default class Modifiers extends React.Component {
             <Picker
               selectedValue={this.state.radioButton}
               style={{ height: 50, width: 250 }}
-              onValueChange={(itemValue) => {
-                console.log('radio value', itemValue)
-                this.setState({radioButton: itemValue})
+              onValueChange={(radioValue) => {
+                this.setState({radioButton: radioValue});
               }}
               mode={'dropdown'}
               >
-              <Picker.Item label="Java" value="java" />
-              <Picker.Item label="JavaScript" value="js" />
+              <Picker.Item label="No Modifier" value={1} />
+              <Picker.Item label="Treasure" value={2.2} />
+              <Picker.Item label="Perfect Catch" value={2.4} />
+              <Picker.Item label="Legendary" value={5} />
             </Picker>
               </View>
-            <Button onPress={() => navigate('CrabPot')} title='Crab Pot Item' />
             <Button onPress={() => {
-              // console.log("RADIOMOD TO PASS: \n", this.state.radioButton);
-              navigate('XP', {value: this.state.passthroughValue, modifier: this.state.radioButton})
+              navigate('XP', {value: this.state.itemValue, modifier: this.state.radioButton});
             }
             } title='Total' />
           </View>

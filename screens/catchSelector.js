@@ -16,9 +16,9 @@ export default class CatchSelector extends React.Component {
             <Text>
               What type of item did you catch?
             </Text>
-            <Button onPress={() => navigate('CrabPot')} title='Crab Pot Item' />
-            <Button onPress={() => navigate('Modifiers', {referrer: 'Trash'})} title='Trash' referrer='Trash'/>
-            <Button onPress={() => navigate('Fish')} title='Fish' />
+            <Button onPress={() => {navigate('XP', {value: 3});}} title='Crab Pot Item' />
+            <Button onPress={() => {navigate('XP', {value: 3});}} title='Trash/Algae' />
+            <Button onPress={() => {navigate('Fish');}} title='Fish' />
           </View>
         </ScrollView>
       </View>
