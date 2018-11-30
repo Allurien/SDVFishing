@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Halibut",
+        "id": 1,
+        "difficulty": 50,
+        "basePrice": 80
+    },
+    {
+        "name": "Herring",
+        "id": 2,
+        "difficulty": 25,
+        "basePrice": 30
+    },
+    {
+        "name": "Sardine",
+        "id": 3,
+        "difficulty": 30,
+        "basePrice": 40
+    },
+    {
+        "name": "Sunfish",
+        "id": 4,
+        "difficulty": 30,
+        "basePrice": 30
+    },
+    {
+        "name": "Halibut",
+        "id": 5,
+        "difficulty": 50,
+        "basePrice": 80
+    },
+    {
+        "name": "Herring",
+        "id": 6,
+        "difficulty": 25,
+        "basePrice": 30
+    },
+    {
+        "name": "Sardine",
+        "id": 7,
+        "difficulty": 30,
+        "basePrice": 40
+    },
+    {
+        "name": "Sunfish",
+        "id": 8,
+        "difficulty": 30,
+        "basePrice": 30
+    }
+]

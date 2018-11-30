@@ -5,12 +5,14 @@ import CatchSelector from '../screens/catchSelector';
 import FishSelector from '../screens/fishSelector';
 import XPDisplay from '../screens/xpDisplay';
 import Modifiers from '../screens/modifiers';
+import Quality from '../screens/quality';
 
 const SelectorStack = createStackNavigator({
   Selector: {screen: CatchSelector},
   Fish: {screen: FishSelector},
   XP: {screen: XPDisplay},
   Modifiers: {screen: Modifiers},
+  Quality: {screen: Quality},
 });
 
 export default class App extends React.Component {
