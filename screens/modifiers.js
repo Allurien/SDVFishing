@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, Text, View, Button, TouchableWithoutFeedback, Picker } from 'react-native';
+import { ScrollView, Text, View, Button, Picker, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import styles from '../assets/styles/mainStyles';
 
 export default class Modifiers extends React.Component {
@@ -7,7 +7,8 @@ export default class Modifiers extends React.Component {
     super(props);
     this.state = {
       itemValue: 0,
-      radioButton: 1
+      radioButton: 1,
+      name: '',
     }
   }
   static navigationOptions = {
@@ -16,8 +17,8 @@ export default class Modifiers extends React.Component {
   componentDidMount(){
     const { navigation } = this.props;
     const value = navigation.getParam('value', 1);
-    this.setState({itemValue: value});
-    console.log('passed value', this.state.itemValue);
+    const name = navigation.getParam('name', 'Legend');
+    this.setState({itemValue: value, name:name});
   }
 
   render() {
@@ -25,29 +26,42 @@ export default class Modifiers extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.getStartedContainer}>
-            <Text>
+          <View style={styles.mainTextContainer}>
+            <Text style={styles.pageHeader}>
               Did you have any catch modifiers?
             </Text>
-            <View>
-            <Picker
-              selectedValue={this.state.radioButton}
-              style={{ height: 50, width: 250 }}
-              onValueChange={(radioValue) => {
-                this.setState({radioButton: radioValue});
-              }}
-              mode={'dropdown'}
-              >
-              <Picker.Item label="No Modifier" value={1} />
-              <Picker.Item label="Treasure" value={2.2} />
-              <Picker.Item label="Perfect Catch" value={2.4} />
-              <Picker.Item label="Legendary" value={5} />
-            </Picker>
-              </View>
-            <Button onPress={() => {
-              navigate('XP', {value: this.state.itemValue, modifier: this.state.radioButton});
-            }
-            } title='Total' />
+            <View style={styles.resultsContainer}>
+              <TouchableOpacity onPress={()=>{navigate('XP', {value: this.state.itemValue, modifier: 1, name: this.state.name, image: this.state.name});}} style={styles.resultBlocks}>
+                <Image source={{uri: `https://s3.us-east-2.amazonaws.com/sdv-fishing/fish/${this.state.name}.png`}} style={styles.fishImage}/>
+                <Text style={styles.fishText}>
+                    None
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={()=>{navigate('XP', {value: this.state.itemValue, modifier: 2.2, name: this.state.name, image: this.state.name});}} style={styles.resultBlocks}>
+                <ImageBackground source={{uri: `https://s3.us-east-2.amazonaws.com/sdv-fishing/fish/${this.state.name}.png`}} style={styles.fishImage}>
+                  <Image source={require('../assets/images/Treasure.png')} style={styles.quality} />
+                </ImageBackground>
+                <Text style={styles.fishText}>
+                    Treasure
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={()=>{navigate('XP', {value: this.state.itemValue, modifier: 2.4, name: this.state.name, image: this.state.name});}} style={styles.resultBlocks}>
+                <ImageBackground source={{uri: `https://s3.us-east-2.amazonaws.com/sdv-fishing/fish/${this.state.name}.png`}} style={styles.fishImage}>
+                  <Image source={require('../assets/images/Perfect.png')} style={styles.quality} />
+                </ImageBackground>
+                <Text style={styles.fishText}>
+                    Perfect
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={()=>{navigate('XP', {value: this.state.itemValue, modifier: 5, name: this.state.name, image: this.state.name});}} style={styles.resultBlocks}>
+                <ImageBackground source={{uri: `https://s3.us-east-2.amazonaws.com/sdv-fishing/fish/${this.state.name}.png`}} style={styles.fishImage}>
+                  <Image source={require('../assets/images/Legendary.png')} style={styles.quality} />
+                </ImageBackground>
+                <Text style={styles.fishText}>
+                    Legendary
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ScrollView>
       </View>
