@@ -40,7 +40,6 @@ export default class XPDisplay extends React.Component {
     let values = {};
     await AsyncStorage.getItem('XP', (err, result) => {
       values = JSON.parse(result);
-      console.log('values', values);
     })
     if(values.lifetime===undefined || values.session===undefined){
       const newXP = {
