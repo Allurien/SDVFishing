@@ -10,7 +10,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/favicon.png",
     "splash": {
-      "image": "./assets/images/MainLogo.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
