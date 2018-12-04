@@ -9,15 +9,17 @@ class FishDisplay extends React.Component{
     }
     passFishValue(value){
         const { navigate } = this.props.navigation;
-        navigate('Quality', {difficulty: this.props.difficulty, price: this.props.basePrice, name: this.props.fishName});
+        var imageFishName = this.props.fishName.replace(/\s+/g, '');
+        navigate('Quality', {difficulty: this.props.difficulty, price: this.props.basePrice, name: this.props.fishName, imageName: imageFishName, type:this.props.type});
     }
     render(){
+        var imageFishName = this.props.fishName.replace(/\s+/g, '');
         return(
             <View style={styles.fishBlock}>
                 <TouchableOpacity onPress={this.passFishValue.bind(this)}>
                 <Image
                 style={styles.fishImage}
-                source={{uri: `https://s3.us-east-2.amazonaws.com/sdv-fishing/fish/${this.props.fishName}.png`}}
+                source={{uri: `https://s3.us-east-2.amazonaws.com/sdv-fishing/fish/${imageFishName}.png`}}
                 />
                 <Text style={styles.fishText}>
                     {this.props.fishName}

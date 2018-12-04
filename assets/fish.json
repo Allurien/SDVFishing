@@ -1,50 +1,353 @@
 [
     {
-        "name": "Halibut",
+        "name": "Albacore",
         "id": 1,
-        "difficulty": 50,
-        "basePrice": 80
+        "difficulty": 60,
+        "basePrice": 75,
+        "legendary": false
     },
     {
-        "name": "Herring",
+        "name": "Anchovy",
         "id": 2,
-        "difficulty": 25,
-        "basePrice": 30
+        "difficulty": 30,
+        "basePrice": 30,
+        "legendary": false
     },
     {
-        "name": "Sardine",
+        "name": "Angler",
         "id": 3,
-        "difficulty": 30,
-        "basePrice": 40
+        "difficulty": 85,
+        "basePrice": 900,
+        "legendary": true
     },
     {
-        "name": "Sunfish",
+        "name": "Blobfish",
         "id": 4,
-        "difficulty": 30,
-        "basePrice": 30
+        "difficulty": 75,
+        "basePrice": 500,
+        "legendary": false
+    },
+    {
+        "name": "Bream",
+        "id": 5,
+        "difficulty": 35,
+        "basePrice": 45,
+        "legendary": false
+    },
+    {
+        "name": "Bullhead",
+        "id": 6,
+        "difficulty": 46,
+        "basePrice": 75,
+        "legendary": false
+    },
+    {
+        "name": "Carp",
+        "id": 7,
+        "difficulty": 15,
+        "basePrice": 30,
+        "legendary": false
+    },
+    {
+        "name": "Catfish",
+        "id": 8,
+        "difficulty": 75,
+        "basePrice": 200,
+        "legendary": false
+    },
+    {
+        "name": "Chub",
+        "id": 9,
+        "difficulty": 35,
+        "basePrice": 50,
+        "legendary": false
+    },
+    {
+        "name": "Crimsonfish",
+        "id": 10,
+        "difficulty": 95,
+        "basePrice": 1500,
+        "legendary": true
+    },
+    {
+        "name": "Dorado",
+        "id": 11,
+        "difficulty": 78,
+        "basePrice": 100,
+        "legendary": false
+    },
+    {
+        "name": "Eel",
+        "id": 12,
+        "difficulty": 70,
+        "basePrice": 85,
+        "legendary": false
+    },
+    {
+        "name": "Ghostfish",
+        "id": 13,
+        "difficulty": 50,
+        "basePrice": 45,
+        "legendary": false
+    },
+    {
+        "name": "Glacierfish",
+        "id": 14,
+        "difficulty": 100,
+        "basePrice": 1000,
+        "legendary": true
     },
     {
         "name": "Halibut",
-        "id": 5,
+        "id": 15,
         "difficulty": 50,
-        "basePrice": 80
+        "basePrice": 80,
+        "legendary": false
     },
     {
         "name": "Herring",
-        "id": 6,
+        "id": 16,
         "difficulty": 25,
-        "basePrice": 30
+        "basePrice": 30,
+        "legendary": false
+    },
+    {
+        "name": "Ice Pip",
+        "id": 17,
+        "difficulty": 85,
+        "basePrice": 500,
+        "legendary": false
+    },
+    {
+        "name": "Largemouth Bass",
+        "id": 18,
+        "difficulty": 50,
+        "basePrice": 100,
+        "legendary": false
+    },
+    {
+        "name": "Lava Eel",
+        "id": 19,
+        "difficulty": 90,
+        "basePrice": 700,
+        "legendary": false
+    },
+    {
+        "name": "Legend",
+        "id": 20,
+        "difficulty": 110,
+        "basePrice": 5000,
+        "legendary": true
+    },
+    {
+        "name": "Lingcod",
+        "id": 21,
+        "difficulty": 85,
+        "basePrice": 120,
+        "legendary": false
+    },
+    {
+        "name": "Midnight Squid",
+        "id": 22,
+        "difficulty": 55,
+        "basePrice": 100,
+        "legendary": false
+    },
+    {
+        "name": "Mutant Carp",
+        "id": 23,
+        "difficulty": 80,
+        "basePrice": 1000,
+        "legendary": true
+    },
+    {
+        "name": "Octopus",
+        "id": 24,
+        "difficulty": 95,
+        "basePrice": 150,
+        "legendary": false
+    },
+    {
+        "name": "Perch",
+        "id": 25,
+        "difficulty": 35,
+        "basePrice": 55,
+        "legendary": false
+    },
+
+    {
+        "name": "Pike",
+        "id": 26,
+        "difficulty": 60,
+        "basePrice": 100,
+        "legendary": false
+    },
+    {
+        "name": "Pufferfish",
+        "id": 27,
+        "difficulty": 80,
+        "basePrice": 200,
+        "legendary": false
+    },
+    {
+        "name": "Rainbow Trout",
+        "id": 28,
+        "difficulty": 45,
+        "basePrice": 65,
+        "legendary": false
+    },
+    {
+        "name": "Red Mullet",
+        "id": 29,
+        "difficulty": 55,
+        "basePrice": 75,
+        "legendary": false
+    },
+    {
+        "name": "Red Snapper",
+        "id": 30,
+        "difficulty": 40,
+        "basePrice": 50,
+        "legendary": false
+    },
+    {
+        "name": "Salmon",
+        "id": 31,
+        "difficulty": 50,
+        "basePrice": 75,
+        "legendary": false
+    },
+    {
+        "name": "Sandfish",
+        "id": 32,
+        "difficulty": 65,
+        "basePrice": 75,
+        "legendary": false
     },
     {
         "name": "Sardine",
-        "id": 7,
+        "id": 33,
         "difficulty": 30,
-        "basePrice": 40
+        "basePrice": 40,
+        "legendary": false
+    },
+    {
+        "name": "Scorpion Carp",
+        "id": 34,
+        "difficulty": 90,
+        "basePrice": 150,
+        "legendary": false
+    },
+    {
+        "name": "Sea Cucumber",
+        "id": 35,
+        "difficulty": 40,
+        "basePrice": 75,
+        "legendary": false
+    },
+    {
+        "name": "Shad",
+        "id": 36,
+        "difficulty": 45,
+        "basePrice": 60,
+        "legendary": false
+    },
+    {
+        "name": "Slimejack",
+        "id": 37,
+        "difficulty": 55,
+        "basePrice": 100,
+        "legendary": false
+    },
+    {
+        "name": "Smallmouth Bass",
+        "id": 38,
+        "difficulty": 28,
+        "basePrice": 50,
+        "legendary": false
+    },
+    {
+        "name": "Spook Fish",
+        "id": 39,
+        "difficulty": 60,
+        "basePrice": 220,
+        "legendary": false
+    },
+    {
+        "name": "Squid",
+        "id": 40,
+        "difficulty": 75,
+        "basePrice": 80,
+        "legendary": false
+    },
+    {
+        "name": "Stonefish",
+        "id": 41,
+        "difficulty": 65,
+        "basePrice": 300,
+        "legendary": false
+    },
+    {
+        "name": "Sturgeon",
+        "id": 42,
+        "difficulty": 78,
+        "basePrice": 200,
+        "legendary": false
     },
     {
         "name": "Sunfish",
-        "id": 8,
+        "id": 43,
         "difficulty": 30,
-        "basePrice": 30
+        "basePrice": 30,
+        "legendary": false
+    },
+    {
+        "name": "Super Cucumber",
+        "id": 44,
+        "difficulty": 80,
+        "basePrice": 250,
+        "legendary": false
+    },
+    {
+        "name": "Tiger Trout",
+        "id": 45,
+        "difficulty": 60,
+        "basePrice": 150,
+        "legendary": false
+    },
+    {
+        "name": "Tilapia",
+        "id": 46,
+        "difficulty": 50,
+        "basePrice": 75,
+        "legendary": false
+    },
+    {
+        "name": "Tuna",
+        "id": 47,
+        "difficulty": 70,
+        "basePrice": 100,
+        "legendary": false
+    },
+    {
+        "name": "Void Salmon",
+        "id": 48,
+        "difficulty": 80,
+        "basePrice": 150,
+        "legendary": false
+    },
+    {
+        "name": "Walleye",
+        "id": 49,
+        "difficulty": 45,
+        "basePrice": 105,
+        "legendary": false
+    },
+    {
+        "name": "Woodskip",
+        "id": 50,
+        "difficulty": 50,
+        "basePrice": 75,
+        "legendary": false
     }
 ]

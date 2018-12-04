@@ -6,17 +6,17 @@ export default StyleSheet.create({
         backgroundColor: '#fff',
     },
     contentContainer: {
-        paddingTop: '15%',
+        paddingTop: '10%',
         alignItems: 'center',
     },
     headerImage: {
-        width: 350,
+        width: '80%',
         resizeMode: 'contain',
     },
     mainTextContainer: {
         alignItems: 'center',
-        marginHorizontal: 25,
-        paddingTop: 30,
+        width: '80%',
+        paddingTop: '5%',
     },
     mainHeader: {
         fontSize: 30,
@@ -30,7 +30,7 @@ export default StyleSheet.create({
         color: 'rgba(96,100,109, 1)',
         lineHeight: 24,
         textAlign: 'center',
-        paddingBottom: 15,
+        paddingBottom: '5%'
     },
     pageHeader: {
         fontSize: 24,
@@ -43,26 +43,33 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        paddingBottom: 15,
+        paddingBottom: '5%'
     },
     fishContainer: {
-        width: 300,
+        width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         flexWrap: 'wrap',
         textAlign: 'center',
-        alignItems: 'center'
+        alignItems: 'flex-start'
     },
     fishBlock: {
-        marginHorizontal: 10
+        marginHorizontal: '2%',
+        maxWidth: '20%',
+        minWidth: '20%',
+        paddingBottom: '15%',
     },
     fishImage: {
         width: 48,
         height: 48,
-        marginBottom: '5%'
+        paddingTop: '15%',
     },
     fishText: {
-        paddingBottom: 25,
+        paddingTop: '15%',
+        maxWidth: '100%',
+        textAlign: 'center',
+        flexWrap: 'wrap',
+        flex: 1
     },
     resultsContainer: {
         paddingTop: '15%',
