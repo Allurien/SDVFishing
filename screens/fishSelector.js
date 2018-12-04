@@ -27,7 +27,7 @@ export default class FishSelector extends React.Component {
             </Text>
             <View style={styles.fishContainer}>
               {Fish.map(fish => {
-                return <FishDisplay key={fish.id} fishName={fish.name} difficulty={fish.difficulty} price={fish.basePrice} />
+                return <FishDisplay key={fish.id} fishName={fish.name} difficulty={fish.difficulty} price={fish.basePrice} type={fish.legendary} />
               })}
             </View>
           </View>
